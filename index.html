@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>Change Calculator</title>
+        <link rel="stylesheet" href="normalize.css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet"> -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+    	<h1>Change Calculator</h1>
+    	<div class="inputFields">
+            <p>How much is due for the sale?<p>
+    		<input id="inputAmountDue" type="text" placeholder="Ex: 12.25">
+            <p>How much has the customer given you?<p>
+            <input id="inputAmountGiven" type="text" placeholder="Ex: 13">
+    	</div>
+        <div class="button">
+            <button id="calculateChange">Calculate Change</button>
+        </div>
+    	<div class="resultingChange">
+            <div class="dollars">
+                <img src="img/50dollars.jpg" style="visibility:visible"/>
+                <p id="_50dollars">X $50 bills</p>
+                <img src="img/20dollars.jpg" style="visibility:visible"/>
+                <p id="_20dollars" >X $20 bills</p>
+                <img src="img/10dollars.png" style="visibility:visible"/>
+                <p id="_10dollars" >X $10 bills</p>
+                <img src="img/5dollars.jpg" style="visibility:visible"/>
+                <p id="_5dollars" >X $5 bills</p>
+                <img src="img/1dollar.jpg" style="visibility:visible"/>
+                <p id="_1dollar">X $1 bills</p>
+            </div>
+            <div class="coins">
+                <img src="img/quarter.jpg" style="visibility:visible"/>
+                <p id="_quarters">X quarters</p>
+                <img src="img/dime.jpg" style="visibility:visible"/>
+                <p id="_dimes">X dimes</p>
+                <img src="img/nickel.jpg" style="visibility:visible"/>
+                <p id="_nickels">X nickels</p>
+                <img src="img/penny.png" style="visibility:visible"/>
+                <p id="_pennies">X pennies</p>
+            </div>
+    	</div>
+        <script src="index.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,15 @@
+img {
+	float: left;
+	max-height: 75px;
+}
+
+.dollars {
+	float: left;
+}
+
+.coins {
+	float: right;
+}
+
+.resultingChange {
+}
