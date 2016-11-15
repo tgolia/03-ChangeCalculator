@@ -30,28 +30,28 @@ function change(changeOwed) {
 	console.log(changeOwed);
 
 	num20s = Math.floor( changeOwed / 20 );
-	changeOwed = roundToDecimal(changeOwed - 20*num20s,2);
+	changeOwed = roundToDecimal( changeOwed - 20 * num20s , 2 );
 
 	num10s = Math.floor( changeOwed / 10 );
-	changeOwed = roundToDecimal(changeOwed - 10*num10s,2);
+	changeOwed = roundToDecimal( changeOwed - 10 * num10s , 2 );
 
 	num5s = Math.floor( changeOwed / 5 );
-	changeOwed = roundToDecimal(changeOwed - 5*num5s,2);
+	changeOwed = roundToDecimal( changeOwed - 5 * num5s , 2 );
 
 	num1s = Math.floor( changeOwed );
-	changeOwed = roundToDecimal(changeOwed - num1s,2);
+	changeOwed = roundToDecimal( changeOwed - num1s , 2 );
 
 	numQuarters = Math.floor( changeOwed / .25 );
-	changeOwed = roundToDecimal(changeOwed - .25*numQuarters,2);
+	changeOwed = roundToDecimal( changeOwed - .25 * numQuarters , 2 );
 
 	numDimes = Math.floor( changeOwed / .1 );
-	changeOwed = roundToDecimal(changeOwed - .1*numDimes,2);
+	changeOwed = roundToDecimal( changeOwed - .1 * numDimes , 2 );
 
 	numNickels = Math.floor( changeOwed / .05 );
-	changeOwed = roundToDecimal(changeOwed - .05*numNickels,2);
+	changeOwed = roundToDecimal( changeOwed - .05 * numNickels , 2 );
 
 	numPennies = Math.round( changeOwed / .01 );
-	changeOwed = roundToDecimal(changeOwed - .01*numPennies,2);
+	changeOwed = roundToDecimal( changeOwed - .01 * numPennies , 2 );
 }
 
 var button = document.getElementById('calculateChange');
@@ -64,15 +64,21 @@ button.onclick = function() {
 
 	change(changeOwed);
 
-	document.getElementById('_50dollars').innerHTML = num50s + ' $50 bills';
-	document.getElementById('_20dollars').innerHTML = num20s + ' $20 bills';
-	document.getElementById('_10dollars').innerHTML = num10s + ' $10 bills';
-	document.getElementById('_5dollars').innerHTML = num5s + ' $5 bills';
-	document.getElementById('_1dollar').innerHTML = num1s + ' $1 bills';
-	document.getElementById('_quarters').innerHTML = numQuarters + ' quarters';
-	document.getElementById('_dimes').innerHTML = numDimes + ' dimes';
-	document.getElementById('_nickels').innerHTML = numNickels + ' nickels';
-	document.getElementById('_pennies').innerHTML = numPennies + ' pennies';
+	document.getElementById('changeOwed').innerHTML = 'You owe $' + changeOwed + ' in change.';
+	document.getElementById('_50dollars').innerHTML = num50s + ' x $50 bills = $' + num50s*50;
+	document.getElementById('_20dollars').innerHTML = num20s + ' x $20 bills = $' + num20s*20;
+	document.getElementById('_10dollars').innerHTML = num10s + ' x $10 bills = $' + num10s*10;
+	document.getElementById('_5dollars').innerHTML = num5s + ' x $5 bills = $' + num5s*5;
+	document.getElementById('_1dollar').innerHTML = num1s + ' x $1 bills = $' + num1s;
+	document.getElementById('_quarters').innerHTML = numQuarters + ' quarters x 25&cent; = ' + numQuarters*25 + '&cent;';
+	document.getElementById('_dimes').innerHTML = numDimes + ' dimes x 10&cent; = ' + numDimes*10 + '&cent;';
+	document.getElementById('_nickels').innerHTML = numNickels + ' nickels x 5&cent; = ' + numNickels*5 + '&cent;';
+	document.getElementById('_pennies').innerHTML = numPennies + ' pennies x 1&cent; = ' + numPennies*1 + '&cent;';
+	document.getElementById('dollars').style.visibility='visible';
+	document.getElementById('coins').style.visibility='visible';
+	document.getElementById('summary').innerHTML = '$' + num50s*50 + ' + $' + num20s*20 + ' + $' + num10s*10 + ' + $' + num5s*5 + ' + $'
+												 + num1s + ' + ' + numQuarters*25 +'&cent; + ' + numDimes*10 + '&cent; + ' + numNickels*5
+												 + '&cent; + ' + numPennies*1 + '&cent; = ' + changeOwed + '!';
 }
 
 

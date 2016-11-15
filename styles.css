@@ -1,15 +1,37 @@
-img {
-	float: left;
-	max-height: 75px;
+title, h1, h2, .inputFields, .button {
+	text-align: center;
 }
 
-.dollars {
-	float: left;
+
+
+#dollars img {
+	max-width: 220px;
+	padding-right: 10px;
 }
 
-.coins {
+#dollars {
+	float: left;
+	margin-left: 100px;
+}
+
+#coins img {
+	max-width: 100px;
+}
+
+#coins {
 	float: right;
+	margin-top: -400px;
+	margin-right: 100px;
+	padding-left: 10px;
 }
 
 .resultingChange {
+}
+
+.captions {
+	column-count: 2;
+}
+
+.captions p {
+	margin-right: 100px;
 }

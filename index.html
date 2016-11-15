@@ -13,37 +13,42 @@
     	<h1>Change Calculator</h1>
     	<div class="inputFields">
             <p>How much is due for the sale?<p>
-    		<input id="inputAmountDue" type="text" placeholder="Ex: 12.25">
+    		<input id="inputAmountDue" type="text" placeholder="Ex: 12.25" style="text-align: center">
             <p>How much has the customer given you?<p>
-            <input id="inputAmountGiven" type="text" placeholder="Ex: 13">
+            <input id="inputAmountGiven" type="text" placeholder="Ex: 13" style="text-align: center">
     	</div>
         <div class="button">
             <button id="calculateChange">Calculate Change</button>
         </div>
+        <br>
+        <h2 id="changeOwed"></h2>
     	<div class="resultingChange">
-            <div class="dollars">
-                <img src="img/50dollars.jpg" style="visibility:visible"/>
-                <p id="_50dollars">X $50 bills</p>
-                <img src="img/20dollars.jpg" style="visibility:visible"/>
-                <p id="_20dollars" >X $20 bills</p>
-                <img src="img/10dollars.png" style="visibility:visible"/>
-                <p id="_10dollars" >X $10 bills</p>
-                <img src="img/5dollars.jpg" style="visibility:visible"/>
-                <p id="_5dollars" >X $5 bills</p>
-                <img src="img/1dollar.jpg" style="visibility:visible"/>
-                <p id="_1dollar">X $1 bills</p>
+            <div id="dollars" style= "visibility: hidden">
+                <img src="img/50dollars.jpg"/><br>
+                <img src="img/20dollars.jpg"/><br>
+                <img src="img/10dollars.png"/><br>
+                <img src="img/5dollars.jpg"/><br>
+                <img src="img/1dollar.jpg"><br>
             </div>
-            <div class="coins">
-                <img src="img/quarter.jpg" style="visibility:visible"/>
-                <p id="_quarters">X quarters</p>
-                <img src="img/dime.jpg" style="visibility:visible"/>
-                <p id="_dimes">X dimes</p>
-                <img src="img/nickel.jpg" style="visibility:visible"/>
-                <p id="_nickels">X nickels</p>
-                <img src="img/penny.png" style="visibility:visible"/>
-                <p id="_pennies">X pennies</p>
+            <div class="captions">
+                <br><p id="_50dollars"></p><br>
+                <br><p id="_20dollars" ></p><br>
+                <br><br><p id="_10dollars" ></p><br>
+                <br><br><p id="_5dollars" ></p><br>
+                <br><br><p id="_1dollar"></p><br>
+                <br><br><p id="_quarters"></p><br>
+                <br><br><p id="_dimes"></p><br>
+                <br><br><p id="_nickels"></p><br>
+                <br><br><p id="_pennies"></p>
+            </div> 
+            <div id="coins" style="visibility: hidden">
+                <img src="img/quarter.jpg"><br>
+                <img src="img/dime.jpg"><br>
+                <img src="img/nickel.jpg"><br>
+                <img src="img/penny.png" ><br>
             </div>
     	</div>
+        <br><br><h2 id="summary"></h2>
         <script src="index.js"></script>
     </body>
 
