@@ -2,8 +2,6 @@ title, h1, h2, .inputFields, .button {
 	text-align: center;
 }
 
-
-
 #dollars img {
 	max-width: 220px;
 	padding-right: 10px;
@@ -23,9 +21,6 @@ title, h1, h2, .inputFields, .button {
 	margin-top: -520px;
 	margin-right: 100px;
 	padding-left: 10px;
-}
-
-.resultingChange {
 }
 
 .captions {
